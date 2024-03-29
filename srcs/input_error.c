@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   input_error.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/29 15:14:10 by dzinchen          #+#    #+#             */
+/*   Updated: 2024/03/29 15:16:04 by dzinchen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 int	syntax_error(char *str)
@@ -7,7 +19,8 @@ int	syntax_error(char *str)
 	i = 0;
 	if (!(str[i] >= '0' || str[i] <= '9'))
 		return (1);
-	if ((str[i] == '+' || str[i] == '-') && !(str[i + 1] >= '0' && str[i + 1] <= '9'))
+	if ((str[i] == '+' || str[i] == '-')
+		&& !(str[i + 1] >= '0' && str[i + 1] <= '9'))
 		return (1);
 	while (str[i])
 	{
@@ -45,7 +58,7 @@ void	free_stack(t_stack_node **stack)
 		free(current);
 		current = tmp;
 	}
-	*stack = NULL; // to avoid undefined behavior
+	*stack = NULL;
 }
 
 void	error_free(t_stack_node **a)

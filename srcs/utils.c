@@ -1,16 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/29 15:20:46 by dzinchen          #+#    #+#             */
+/*   Updated: 2024/03/29 15:21:46 by dzinchen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
-int stack_len(t_stack_node *stack)
+int	stack_len(t_stack_node *stack)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (stack)
-    {
-        i++;
-        stack = stack->next;
-    }
-    return (i);
+	i = 0;
+	while (stack)
+	{
+		i++;
+		stack = stack->next;
+	}
+	return (i);
 }
 
 long	ft_atol(char *str)
