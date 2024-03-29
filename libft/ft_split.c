@@ -103,11 +103,3 @@ char	**ft_split(char const *s, char c)
 		arr = copy_word(s, c, words, arr);
 	return (arr);
 }
-
-/*int	main(void)
-{
-	char const *s = "bob-likes-bananas";
-	char c = '-';
-	printf("%s", ft_split(s, c)[0]);
-//	printf("%s", *ft_split("hello!", ' '));
-}*/

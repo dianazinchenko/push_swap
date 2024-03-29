@@ -1,3 +1,5 @@
+#include "../push_swap.h"
+
 int	syntax_error(char *str)
 {
 	int	i;
@@ -16,15 +18,39 @@ int	syntax_error(char *str)
 	return (0);
 }
 
-int	repetition_error(t_stack_node *a, int nbr)
+int	repetition_error(t_stack_node *stack, int nbr)
 {
-	if (a == NULL)
+	if (stack == NULL)
 		return (0);
-	while (a)
+	while (stack)
 	{
-		if (a->nbr == nbr)
+		if (stack->nbr == nbr)
 			return (1);
-		a = a->next;
+		stack = stack->next;
 	}
 	return (0);
+}
+
+void	free_stack(t_stack_node **stack)
+{
+	t_stack_node	*tmp;
+	t_stack_node	*current;
+
+	if (!stack)
+		return ;
+	current = *stack;
+	while (current)
+	{
+		tmp = current->next;
+		free(current);
+		current = tmp;
+	}
+	*stack = NULL; // to avoid undefined behavior
+}
+
+void	error_free(t_stack_node **a)
+{
+	free_stack(a);
+	ft_printf("Error\n");
+	exit(1);
 }

@@ -6,18 +6,18 @@ CFLAGS = -Wall -Wextra -Werror
 
 RM = rm -rf
 
-LIBFT = lib/libft/libft.a
+LIBFT = libft/libft.a
 
-LIBFT_DIR = lib/libft
+LIBFT_DIR = libft
 
-SRCS = srcs/utils.c srcs/rotate_operations.c 
+SRCS = srcs/utils.c srcs/create_stack.c srcs/input_error.c srcs/rotate_operations.c srcs/testing.c srcs/main.c 
 
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(LIBFT) $(OBJS)
-	$(CC) $(CFLAGS) -o $(OBJS) $(LIBFT)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFT)
 
 $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
