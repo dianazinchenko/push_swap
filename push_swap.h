@@ -53,7 +53,5 @@ void	create_stack(t_stack_node **a, char **argv);
 /* TESTING */
 void	print_stack(t_stack_node *stack);
 
-/* Split */
-// todo:
 
 #endif
