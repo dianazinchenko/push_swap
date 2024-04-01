@@ -30,6 +30,9 @@ int	main(int argc, char **argv)
 		create_stack(&a, argv + 1);
 	ft_printf("Stack A:\n");
 	print_stack(a);
+	ft_printf("Swapped stack A:\n");
+	sa(&a);
+	print_stack(a);
 	/*ft_printf("Stack len: %i\n", stack_len(a));
 	rotate(&a);
 	ft_printf("Stack A after rotate:\n");

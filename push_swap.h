@@ -44,11 +44,17 @@ void	error_free(t_stack_node **a);
 void	append_node(t_stack_node **stack, int nbr);
 void	create_stack(t_stack_node **a, char **argv);
 
-/* Sort Three */
-//todo: void    sort_three(t_stack_node **a);
+/* Swap Operations */
+void	swap(t_stack_node **head);
+void	sa(t_stack_node **a);
+void	sb(t_stack_node **b);
+void	ss(t_stack_node **a, t_stack_node **b);
 
 /* Rotate Operations */
-//todo: void	rotate(t_stack_node **stack);
+void	rotate(t_stack_node **stack);
+
+/* Sort Three */
+//todo: void    sort_three(t_stack_node **stack);
 
 /* TESTING */
 void	print_stack(t_stack_node *stack);
