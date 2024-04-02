@@ -30,10 +30,11 @@ int	main(int argc, char **argv)
 		create_stack(&a, argv + 1);
 	ft_printf("Stack A:\n");
 	print_stack(a);
-	pb(&a, &b);
-	pb(&a, &b);
-	pb(&a, &b);
-	sb(&b);
+	t_stack_node	*biggest = find_biggest_node(a);
+	ft_printf("\nbiggest: %i\n", biggest->nbr);
+	ft_printf("Sorted 3 numbers:\n");
+	sort_three(&a);
+	print_stack(a);
 	ft_printf("Stack B:\n");
 	print_stack(b);
 

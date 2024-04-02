@@ -58,3 +58,32 @@ t_stack_node	*find_last_node(t_stack_node *head)
 		head = head->next;
 	return (head);
 }
+
+t_stack_node	*find_biggest_node(t_stack_node *head)
+{
+	t_stack_node	*biggest;
+
+	if (head == NULL)
+		return (NULL);
+	biggest = head;
+	while (head)
+	{
+		if (head->nbr > biggest->nbr)
+			biggest = head;
+		head = head->next;
+	}
+	return (biggest);
+}
+
+bool	sorted_stack(t_stack_node *stack)
+{
+	if (stack == NULL)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->nbr > stack->next->nbr)
+			return (false);
+		stack = stack->next;
+	}
+	return (true);
+}

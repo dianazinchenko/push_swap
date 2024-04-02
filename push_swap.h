@@ -33,6 +33,8 @@ typedef struct s_stack_node
 int				stack_len(t_stack_node *stack);
 long			ft_atol(char *str);
 t_stack_node	*find_last_node(t_stack_node *head);
+t_stack_node	*find_biggest_node(t_stack_node *head);
+bool			sorted_stack(t_stack_node *stack);
 
 /* Input Error */
 int				syntax_error(char *str);
@@ -68,7 +70,7 @@ void			pa(t_stack_node **a, t_stack_node **b);
 void			pb(t_stack_node **a, t_stack_node **b);
 
 /* Sort Three */
-//todo: void    sort_three(t_stack_node **stack);
+void    sort_three(t_stack_node **a);
 
 /* TESTING */
 void			print_stack(t_stack_node *stack);
