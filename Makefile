@@ -11,7 +11,7 @@ LIBFT = libft/libft.a
 LIBFT_DIR = libft
 
 SRCS = srcs/utils.c srcs/create_stack.c srcs/input_error.c srcs/rotate_operations.c srcs/testing.c srcs/main.c \
-srcs/swap_operations.c
+srcs/swap_operations.c srcs/reverse_rotate_operations.c
 
 OBJS = $(SRCS:.c=.o)
 

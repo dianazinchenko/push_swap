@@ -52,12 +52,20 @@ void	ss(t_stack_node **a, t_stack_node **b);
 
 /* Rotate Operations */
 void	rotate(t_stack_node **stack);
+void	ra(t_stack_node **a);
+void	rb(t_stack_node **b);
+void	rr(t_stack_node **a, t_stack_node **b);
+
+/* Reverse Rotate Operations */
+void	reverse_rotate(t_stack_node **stack);
+void	rra(t_stack_node **a);
+void	rrb(t_stack_node **b);
+void	rrr(t_stack_node **a, t_stack_node **b);
 
 /* Sort Three */
 //todo: void    sort_three(t_stack_node **stack);
 
 /* TESTING */
 void	print_stack(t_stack_node *stack);
-
 
 #endif
