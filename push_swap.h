@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:02:42 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/02 11:19:05 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/02 15:27:41 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void			pa(t_stack_node **a, t_stack_node **b);
 void			pb(t_stack_node **a, t_stack_node **b);
 
 /* Sort Three */
-void    sort_three(t_stack_node **a);
+void			sort_three(t_stack_node **a);
 
 /* TESTING */
 void			print_stack(t_stack_node *stack);
