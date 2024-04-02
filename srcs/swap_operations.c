@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void	swap(t_stack_node **head)
+static void	swap(t_stack_node **head)
 {
 	t_stack_node	*temp;
 

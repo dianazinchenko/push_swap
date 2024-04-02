@@ -15,10 +15,10 @@
 int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
-	//t_stack_node	*b;
+	t_stack_node	*b;
 
 	a = NULL;
-	//b = NULL;
+	b = NULL;
 	if (argc < 2 || (argc == 2 && !ft_strlen(argv[1])))
 		return (1);
 	else if (argc == 2)
@@ -30,12 +30,12 @@ int	main(int argc, char **argv)
 		create_stack(&a, argv + 1);
 	ft_printf("Stack A:\n");
 	print_stack(a);
-	ft_printf("Swapped stack A:\n");
-	sa(&a);
-	print_stack(a);
-	/*ft_printf("Stack len: %i\n", stack_len(a));
-	rotate(&a);
-	ft_printf("Stack A after rotate:\n");
-	print_stack(a);*/
+	pb(&a, &b);
+	pb(&a, &b);
+	pb(&a, &b);
+	sb(&b);
+	ft_printf("Stack B:\n");
+	print_stack(b);
+
 	return (0);
 }

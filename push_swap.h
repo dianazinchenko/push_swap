@@ -45,22 +45,27 @@ void			append_node(t_stack_node **stack, int nbr);
 void			create_stack(t_stack_node **a, char **argv);
 
 /* Swap Operations */
-void			swap(t_stack_node **head);
+//void			swap(t_stack_node **head);
 void			sa(t_stack_node **a);
 void			sb(t_stack_node **b);
 void			ss(t_stack_node **a, t_stack_node **b);
 
 /* Rotate Operations */
-void			rotate(t_stack_node **stack);
+//void			rotate(t_stack_node **stack);
 void			ra(t_stack_node **a);
 void			rb(t_stack_node **b);
 void			rr(t_stack_node **a, t_stack_node **b);
 
 /* Reverse Rotate Operations */
-void			reverse_rotate(t_stack_node **stack);
+//void			reverse_rotate(t_stack_node **stack);
 void			rra(t_stack_node **a);
 void			rrb(t_stack_node **b);
 void			rrr(t_stack_node **a, t_stack_node **b);
+
+/* Push Operations */
+//void			push(t_stack_node **from, t_stack_node **to);
+void			pa(t_stack_node **a, t_stack_node **b);
+void			pb(t_stack_node **a, t_stack_node **b);
 
 /* Sort Three */
 //todo: void    sort_three(t_stack_node **stack);
