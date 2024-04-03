@@ -28,7 +28,23 @@ int	main(int argc, char **argv)
 	}
 	else
 		create_stack(&a, argv + 1);
+	if (!sorted_stack(a))
+	{
+		if (stack_len(a) == 2)
+			sa(&a);
+		else if (stack_len(a) == 3)
+			sort_three(&a);
+		else
+			sort_stack(&a, &b);
+	}
 	ft_printf("Stack A:\n");
+	print_stack(a);
+	ft_printf("Stack B:\n");
+	print_stack(b);
+	free_stack(&a);
+	
+	
+	/*ft_printf("Stack A:\n");
 	print_stack(a);
 	t_stack_node	*biggest = find_biggest_node(a);
 	ft_printf("\nbiggest: %i\n", biggest->nbr);
@@ -36,7 +52,7 @@ int	main(int argc, char **argv)
 	sort_three(&a);
 	print_stack(a);
 	ft_printf("Stack B:\n");
-	print_stack(b);
-
+	print_stack(b);*/
+	
 	return (0);
 }

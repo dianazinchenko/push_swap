@@ -17,14 +17,14 @@ void	append_node(t_stack_node **stack, int nbr)
 	t_stack_node	*new_node;
 	t_stack_node	*last_node;
 
-	if (!stack)
+	if (stack == NULL) //
 		return ;
 	new_node = malloc(sizeof(t_stack_node));
 	if (!new_node)
 		return ;
 	new_node->next = NULL;
 	new_node->nbr = nbr;
-	if (!*stack)
+	if (*stack == NULL)
 	{
 		*stack = new_node;
 		new_node->prev = NULL;
