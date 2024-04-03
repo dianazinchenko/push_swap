@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_a_to_b.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/03 12:59:56 by dzinchen          #+#    #+#             */
+/*   Updated: 2024/04/03 13:00:34 by dzinchen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 static void	set_target_for_a(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*b_node;
-	t_stack_node 	*target_node;
+	t_stack_node	*target_node;
 	long			best_match;
 
 	if (a == NULL || b == NULL)
@@ -32,7 +44,7 @@ static void	set_target_for_a(t_stack_node *a, t_stack_node *b)
 void	push_price(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
-	int len_b;
+	int	len_b;
 
 	len_a = stack_len(a);
 	len_b = stack_len(b);

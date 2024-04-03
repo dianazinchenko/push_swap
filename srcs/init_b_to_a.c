@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   init_b_to_a.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/03 13:01:18 by dzinchen          #+#    #+#             */
+/*   Updated: 2024/04/03 13:01:39 by dzinchen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 static void	set_target_for_b(t_stack_node *b, t_stack_node *a)
@@ -23,9 +35,9 @@ static void	set_target_for_b(t_stack_node *b, t_stack_node *a)
 		}
 	}
 	if (best_match == LONG_MAX)
-			b->target_node = find_biggest_node(a);
-		else
-			b->target_node = target_node;
+		b->target_node = find_biggest_node(a);
+	else
+		b->target_node = target_node;
 	b = b->next;
 }
 

@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:13:34 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/03/29 15:13:41 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/03 12:59:30 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	append_node(t_stack_node **stack, int nbr)
 	t_stack_node	*new_node;
 	t_stack_node	*last_node;
 
-	if (stack == NULL) //
+	if (stack == NULL)
 		return ;
 	new_node = malloc(sizeof(t_stack_node));
 	if (!new_node)
