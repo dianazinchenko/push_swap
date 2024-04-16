@@ -41,7 +41,7 @@ static void	set_target_for_a(t_stack_node *a, t_stack_node *b)
 	a = a->next;
 }
 
-void	push_price(t_stack_node *a, t_stack_node *b)
+static void	push_price(t_stack_node *a, t_stack_node *b)
 {
 	int	len_a;
 	int	len_b;
@@ -61,9 +61,31 @@ void	push_price(t_stack_node *a, t_stack_node *b)
 	}
 }
 
+static void	set_cheapest(t_stack_node *stack)
+{
+	t_stack_node	*cheapest_node;
+	long			cheapest;
+
+	if (stack == NULL)
+		return ;
+	cheapest = LONG_MAX;
+	while (stack)
+	{
+		if (stack->push_price < cheapest)
+		{
+			cheapest = stack->push_price;
+			cheapest_node = stack;
+		}
+		stack = stack->next;
+	}
+	cheapest_node->cheapest = true;
+}
+
 void	init_a_to_b(t_stack_node *a, t_stack_node *b)
 {
 	current_index(a);
 	current_index(b);
-	set_target_a(a, b);
+	set_target_for_a(a, b);
+	push_price(a, b);
+	set_cheapest(a);
 }

@@ -10,8 +10,9 @@ LIBFT = libft/libft.a
 
 LIBFT_DIR = libft
 
-SRCS = srcs/utils.c srcs/create_stack.c srcs/input_error.c srcs/rotate_operations.c srcs/testing.c srcs/main.c \
-srcs/swap_operations.c srcs/reverse_rotate_operations.c srcs/push_operations.c srcs/sort_three.c srcs/sort_stack.c
+SRCS = srcs/utils.c srcs/utils2.c srcs/create_stack.c srcs/input_error.c srcs/rotate_operations.c srcs/testing.c srcs/main.c \
+srcs/swap_operations.c srcs/reverse_rotate_operations.c srcs/push_operations.c srcs/sort_three.c srcs/init_a_to_b.c \
+srcs/init_b_to_a.c srcs/sort_stack.c
 
 OBJS = $(SRCS:.c=.o)
 

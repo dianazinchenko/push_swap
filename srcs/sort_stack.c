@@ -26,7 +26,7 @@ void	sort_stack(t_stack_node **a, t_stack_node **b)
 	}
 	while (len-- > 3 && !sorted_stack(*a))
 	{
-		// todo: move nodes from a to b
+		init_a_to_b(*a, *b);
 	}
 	sort_three(a);
 	while (*b)
