@@ -6,11 +6,12 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:16:50 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/03/29 15:18:31 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:35:43 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
@@ -41,8 +42,8 @@ int	main(int argc, char **argv)
 	print_stack(a);
 	ft_printf("Stack B:\n");
 	print_stack(b);
-	ft_printf("%ld", LONG_MAX);
-	
+	printf("%ld\n", LONG_MAX);
+	printf("%i", INT_MAX);	
 	
 	/*ft_printf("Stack A:\n");
 	print_stack(a);

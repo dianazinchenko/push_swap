@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 12:59:56 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/03 13:00:34 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:43:33 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ static void	set_target_for_a(t_stack_node *a, t_stack_node *b)
 			}
 			b_node = b_node->next;
 		}
-	
 		if (best_match == LONG_MIN)
 			a->target_node = find_smallest_node(b);
 		else

@@ -6,13 +6,14 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:02:02 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/03 13:02:07 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:39:32 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	prep_for_push(t_stack_node **stack, t_stack_node *target_node, char c)
+static void	prep_for_push(t_stack_node **stack,
+		t_stack_node *target_node, char c)
 {
 	while (*stack != target_node)
 	{
@@ -49,7 +50,7 @@ static void	move_a_to_b(t_stack_node **a, t_stack_node **b)
 	pb(a, b);
 }
 
-static void move_b_to_a(t_stack_node **a, t_stack_node **b)
+static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 {
 	prep_for_push(a, (*b)->target_node, 'a');
 	pa(b, a);

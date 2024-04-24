@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:02:42 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/02 15:27:41 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:48:22 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,15 @@ void			ss(t_stack_node **a, t_stack_node **b);
 void			ra(t_stack_node **a);
 void			rb(t_stack_node **b);
 void			rr(t_stack_node **a, t_stack_node **b);
-void			rotate_both(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest_node);
+void			rotate_both(t_stack_node **a,
+					t_stack_node **b, t_stack_node *cheapest_node);
 
 /* Reverse Rotate Operations */
 void			rra(t_stack_node **a);
 void			rrb(t_stack_node **b);
 void			rrr(t_stack_node **a, t_stack_node **b);
-void			reverse_rotate_both(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest_node);
+void			reverse_rotate_both(t_stack_node **a,
+					t_stack_node **b, t_stack_node *cheapest_node);
 
 /* Push Operations */
 void			pa(t_stack_node **a, t_stack_node **b);
