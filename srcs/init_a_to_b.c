@@ -18,8 +18,6 @@ static void	set_target_for_a(t_stack_node *a, t_stack_node *b)
 	t_stack_node	*target_node;
 	long			best_match;
 
-	if (a == NULL || b == NULL)
-		return ;
 	while (a)
 	{
 		b_node = b;
@@ -33,12 +31,13 @@ static void	set_target_for_a(t_stack_node *a, t_stack_node *b)
 			}
 			b_node = b_node->next;
 		}
+	
+		if (best_match == LONG_MIN)
+			a->target_node = find_smallest_node(b);
+		else
+			a->target_node = target_node;
+		a = a->next;
 	}
-	if (best_match == LONG_MIN)
-		a->target_node = find_smallest_node(b);
-	else
-		a->target_node = target_node;
-	a = a->next;
 }
 
 static void	push_price(t_stack_node *a, t_stack_node *b)

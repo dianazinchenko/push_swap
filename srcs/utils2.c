@@ -12,18 +12,18 @@
 
 #include "../push_swap.h"
 
-t_stack_node	*find_smallest_node(t_stack_node *head)
+t_stack_node	*find_smallest_node(t_stack_node *stack)
 {
 	t_stack_node	*smallest;
 
-	if (head == NULL)
+	if (stack == NULL)
 		return (NULL);
-	smallest = head;
-	while (head)
+	smallest = stack;
+	while (stack)
 	{
-		if (head->nbr < smallest->nbr)
-			smallest = head;
-		head = head->next;
+		if (stack->nbr < smallest->nbr)
+			smallest = stack;
+		stack = stack->next;
 	}
 	return (smallest);
 }
@@ -47,4 +47,17 @@ void	current_index(t_stack_node *stack)
 		i++;
 		stack = stack->next;
 	}
+}
+
+t_stack_node	*find_cheapest(t_stack_node *stack)
+{
+	if (stack == NULL)
+		return (NULL);
+	while (stack)
+	{
+		if (stack->cheapest == true)
+			return (stack);
+		stack = stack->next;
+	}
+	return (NULL);
 }

@@ -37,6 +37,7 @@ t_stack_node	*find_biggest_node(t_stack_node *head);
 bool			sorted_stack(t_stack_node *stack);
 t_stack_node	*find_smallest_node(t_stack_node *head);
 void			current_index(t_stack_node *stack);
+t_stack_node	*find_cheapest(t_stack_node *stack);
 
 /* Input Error */
 int				syntax_error(char *str);
@@ -57,11 +58,13 @@ void			ss(t_stack_node **a, t_stack_node **b);
 void			ra(t_stack_node **a);
 void			rb(t_stack_node **b);
 void			rr(t_stack_node **a, t_stack_node **b);
+void			rotate_both(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest_node);
 
 /* Reverse Rotate Operations */
 void			rra(t_stack_node **a);
 void			rrb(t_stack_node **b);
 void			rrr(t_stack_node **a, t_stack_node **b);
+void			reverse_rotate_both(t_stack_node **a, t_stack_node **b, t_stack_node *cheapest_node);
 
 /* Push Operations */
 void			pa(t_stack_node **a, t_stack_node **b);
@@ -74,7 +77,7 @@ void			sort_three(t_stack_node **a);
 void			init_a_to_b(t_stack_node *a, t_stack_node *b);
 
 /* Init B to A */
-void			init_a_to_b(t_stack_node *b, t_stack_node *a);
+void			init_b_to_a(t_stack_node *a, t_stack_node *b);
 
 /* Sort Stack */
 void			sort_stack(t_stack_node **a, t_stack_node **b);
