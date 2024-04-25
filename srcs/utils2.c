@@ -40,7 +40,7 @@ void	current_index(t_stack_node *stack)
 	while (stack)
 	{
 		stack->index = i;
-		if (stack->index < median)
+		if (stack->index <= median)
 			stack->above_median = true;
 		else
 			stack->above_median = false;

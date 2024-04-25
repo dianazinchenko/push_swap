@@ -50,33 +50,30 @@ void			append_node(t_stack_node **stack, int nbr);
 void			create_stack(t_stack_node **a, char **argv);
 
 /* Swap Operations */
-void			sa(t_stack_node **a);
-void			sb(t_stack_node **b);
-void			ss(t_stack_node **a, t_stack_node **b);
+void			sa(t_stack_node **a, bool print);
+void			sb(t_stack_node **b, bool print);
+void			ss(t_stack_node **a, t_stack_node **b, bool print);
 
 /* Rotate Operations */
-void			ra(t_stack_node **a);
-void			rb(t_stack_node **b);
-void			rr(t_stack_node **a, t_stack_node **b);
+void			ra(t_stack_node **a, bool print);
+void			rb(t_stack_node **b, bool print);
+void			rr(t_stack_node **a, t_stack_node **b, bool print);
 void			rotate_both(t_stack_node **a,
 					t_stack_node **b, t_stack_node *cheapest_node);
 
 /* Reverse Rotate Operations */
-void			rra(t_stack_node **a);
-void			rrb(t_stack_node **b);
-void			rrr(t_stack_node **a, t_stack_node **b);
+void			rra(t_stack_node **a, bool print);
+void			rrb(t_stack_node **b, bool print);
+void			rrr(t_stack_node **a, t_stack_node **b, bool print);
 void			reverse_rotate_both(t_stack_node **a,
 					t_stack_node **b, t_stack_node *cheapest_node);
 
 /* Push Operations */
-void			pa(t_stack_node **a, t_stack_node **b);
-void			pb(t_stack_node **a, t_stack_node **b);
+void			pa(t_stack_node **a, t_stack_node **b, bool print);
+void			pb(t_stack_node **a, t_stack_node **b, bool print);
 
 /* Sort Three */
 void			sort_three(t_stack_node **a);
-
-/* Init A to B */
-void			init_a_to_b(t_stack_node *a, t_stack_node *b);
 
 /* Init B to A */
 void			init_b_to_a(t_stack_node *a, t_stack_node *b);

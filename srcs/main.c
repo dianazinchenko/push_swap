@@ -32,19 +32,17 @@ int	main(int argc, char **argv)
 	if (!sorted_stack(a))
 	{
 		if (stack_len(a) == 2)
-			sa(&a);
+			sa(&a, false);
 		else if (stack_len(a) == 3)
 			sort_three(&a);
 		else
 			sort_stack(&a, &b);
 	}
-	ft_printf("Stack A:\n");
+	/*ft_printf("Stack A:\n");
 	print_stack(a);
 	ft_printf("Stack B:\n");
-	print_stack(b);
-	printf("%ld\n", LONG_MAX);
-	printf("%i", INT_MAX);	
-	
+	print_stack(b);*/
+
 	/*ft_printf("Stack A:\n");
 	print_stack(a);
 	t_stack_node	*biggest = find_biggest_node(a);
