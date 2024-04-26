@@ -36,12 +36,12 @@ t_stack_node	*find_last_node(t_stack_node *head);
 t_stack_node	*find_biggest_node(t_stack_node *head);
 bool			sorted_stack(t_stack_node *stack);
 t_stack_node	*find_smallest_node(t_stack_node *head);
-void			current_index(t_stack_node *stack);
+void	current_index(t_stack_node *stack);
 t_stack_node	*find_cheapest(t_stack_node *stack);
 
 /* Input Error */
-int				syntax_error(char *str);
-int				repetition_error(t_stack_node *a, int nbr);
+bool			syntax_error(char *str);
+bool			repetition_error(t_stack_node *a, int nbr);
 void			free_stack(t_stack_node **stack);
 void			error_free(t_stack_node **a);
 

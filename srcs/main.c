@@ -38,22 +38,29 @@ int	main(int argc, char **argv)
 		else
 			sort_stack(&a, &b);
 	}
-	free_stack(&a);
+	printf("Stack a:\n");
+	print_stack(a);
+	printf("Stack b:\n");
+	print_stack(b);
 
-	/*ft_printf("Stack A:\n");
-	print_stack(a);
-	ft_printf("Stack B:\n");
-	print_stack(b);*/
+	// test operations
+	//sa(&a, false);
+	//sb(&b, false);
+	//ss(&a, &b, false);
+	//pa(&b, &a, false);
+	//pb(&a, &b, false);
+	//ra(&a, false);
+	//rb(&b, false);
+	//rr(&a, &b, false);
+	//rra(&a, false);
+	//rrb(&b, false);
+	//rrr(&a, &b, false);
 
-	/*ft_printf("Stack A:\n");
+	printf("\nStack a after:\n");
 	print_stack(a);
-	t_stack_node	*biggest = find_biggest_node(a);
-	ft_printf("\nbiggest: %i\n", biggest->nbr);
-	ft_printf("Sorted 3 numbers:\n");
-	sort_three(&a);
-	print_stack(a);
-	ft_printf("Stack B:\n");
-	print_stack(b);*/
+	printf("Stack b after:\n");
+	print_stack(b);
+	
 	
 	return (0);
 }

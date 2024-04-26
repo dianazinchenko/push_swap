@@ -46,7 +46,7 @@ void	create_stack(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		nbr = ft_atol(argv[i]);
-		if (nbr < INT_MIN || nbr > INT_MAX || ft_strlen(argv[i]) > 11)
+		if (ft_strlen(argv[i]) > 11 || nbr < INT_MIN || nbr > INT_MAX)
 			error_free(a);
 		if (repetition_error(*a, (int)nbr))
 			error_free(a);

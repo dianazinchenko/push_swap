@@ -12,34 +12,34 @@
 
 #include "../push_swap.h"
 
-int	syntax_error(char *str)
+bool	syntax_error(char *str)
 {
 	int	i;
 
 	i = 0;
 	if (!(str[i] == '+' || str[i] == '-' || (str[i] >= '0' && str[i] <= '9')))
-		return (1);
+		return (true);
 	if ((str[i] == '+' || str[i] == '-') && !(str[1] >= '0' && str[1] <= '9'))
-		return (1);
+		return (true);
 	while (str[++i])
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
-			return (1);
+			return (true);
 	}
-	return (0);
+	return (false);
 }
 
-int	repetition_error(t_stack_node *stack, int nbr)
+bool	repetition_error(t_stack_node *stack, int nbr)
 {
 	if (stack == NULL)
 		return (0);
 	while (stack)
 	{
 		if (stack->nbr == nbr)
-			return (1);
+			return (true);
 		stack = stack->next;
 	}
-	return (0);
+	return (false);
 }
 
 void	free_stack(t_stack_node **stack)
