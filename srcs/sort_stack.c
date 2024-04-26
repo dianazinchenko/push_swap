@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:02:02 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/24 13:39:32 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/26 08:54:12 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,6 @@ void	sort_stack(t_stack_node **a, t_stack_node **b)
 	}
 	current_index(*a);
 	smallest_to_top(a);
-	ft_printf("STACK A:\n");
-	print_stack(*a);
+//	ft_printf("STACK A:\n");
+//	print_stack(*a);
 }
