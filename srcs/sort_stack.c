@@ -6,13 +6,13 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:02:02 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/26 08:54:12 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/26 10:53:42 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-/*static void	prep_for_push(t_stack_node **stack,
+static void	prep_for_push(t_stack_node **stack,
 		t_stack_node *target_node, char c)
 {
 	while (*stack != target_node)
@@ -32,21 +32,21 @@
 				rrb(stack, false);
 		}
 	}
-}*/
-/*
+}
+
 static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 {
 	t_stack_node	*cheapest_node;
 
-	cheapest_node = find_cheapest(*b);*/
-/*
-	ft_printf("STACK A:\n");
+	cheapest_node = find_cheapest(*b);
+
+/*	ft_printf("STACK A:\n");
 	print_stack(*a);
 	ft_printf("STACK B:\n");
 	print_stack(*b);
 	ft_printf("CHEAPEST NODE:\n");
-	ft_printf("%i\n", cheapest_node->nbr);
-*//*
+	ft_printf("%i\n", cheapest_node->nbr);*/
+
 	if (cheapest_node->above_median && cheapest_node->target_node->above_median)
 		rotate_both(a, b, cheapest_node);
 	else if (!(cheapest_node->above_median) && !(cheapest_node->target_node->above_median))
@@ -55,9 +55,9 @@ static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 	prep_for_push(b, cheapest_node, 'b');
 	prep_for_push(a, cheapest_node->target_node, 'a');
 	pa(b, a, false);
-}*/
+}
 
-/*static void	smallest_to_top(t_stack_node **a)
+static void	smallest_to_top(t_stack_node **a)
 {
 	while ((*a)->nbr != find_smallest_node(*a)->nbr)
 	{
@@ -66,7 +66,7 @@ static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 		else
 			rra(a, false);
 	}
-}*/
+}
 
 void	sort_stack(t_stack_node **a, t_stack_node **b)
 {
@@ -76,13 +76,13 @@ void	sort_stack(t_stack_node **a, t_stack_node **b)
 	while (len_a-- > 3 && !sorted_stack(*a))
 		pb(a, b, false);
 	sort_three(a);
-	/*while (*b)
+	while (*b)
 	{
 		init_b_to_a(*a, *b);
 		move_b_to_a(a, b);
 	}
 	current_index(*a);
-	smallest_to_top(a);*/
+	smallest_to_top(a);
 //	ft_printf("STACK A:\n");
 //	print_stack(*a);
 }

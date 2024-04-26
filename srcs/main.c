@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:16:50 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/26 08:52:15 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/26 10:52:30 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ int	main(int argc, char **argv)
 		else
 			sort_stack(&a, &b);
 	}
-	printf("Stack a:\n");
+	/*printf("Stack a:\n");
 	print_stack(a);
 	printf("Stack b:\n");
-	print_stack(b);
+	print_stack(b);*/
 
 	// test operations
 	//sa(&a, false);
@@ -56,11 +56,11 @@ int	main(int argc, char **argv)
 	//rrb(&b, false);
 	//rrr(&a, &b, false);
 
-	printf("\nStack a after:\n");
+/*	printf("\nStack a after:\n");
 	print_stack(a);
 	printf("Stack b after:\n");
-	print_stack(b);
-	
+	print_stack(b);*/
+	free_stack(&a);
 	
 	return (0);
 }
