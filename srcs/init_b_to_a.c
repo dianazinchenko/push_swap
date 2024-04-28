@@ -50,11 +50,11 @@ static void	push_price(t_stack_node *a, t_stack_node *b)
 	{
 		b->push_price = b->index;
 		if (!(b->above_median))
-			b->push_price = len_a - b->index;
+			b->push_price = len_b - b->index;
 		if (b->target_node->above_median)
 			b->push_price += b->target_node->index;
 		else
-			b->push_price += len_b - b->target_node->index;
+			b->push_price += len_a - b->target_node->index;
 		b = b->next;
 	}
 }
