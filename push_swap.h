@@ -36,7 +36,7 @@ t_stack_node	*find_last_node(t_stack_node *head);
 t_stack_node	*find_biggest_node(t_stack_node *head);
 bool			sorted_stack(t_stack_node *stack);
 t_stack_node	*find_smallest_node(t_stack_node *head);
-void	current_index(t_stack_node *stack);
+void			current_index(t_stack_node *stack);
 t_stack_node	*find_cheapest(t_stack_node *stack);
 
 /* Input Error */

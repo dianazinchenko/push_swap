@@ -39,19 +39,12 @@ static void	move_b_to_a(t_stack_node **a, t_stack_node **b)
 	t_stack_node	*cheapest_node;
 
 	cheapest_node = find_cheapest(*b);
-
-/*	ft_printf("STACK A:\n");
-	print_stack(*a);
-	ft_printf("STACK B:\n");
-	print_stack(*b);
-	ft_printf("CHEAPEST NODE:\n");
-	ft_printf("%i\n", cheapest_node->nbr);*/
-
-	if (cheapest_node->above_median && cheapest_node->target_node->above_median)
+	if (cheapest_node->above_median
+		&& cheapest_node->target_node->above_median)
 		rotate_both(a, b, cheapest_node);
-	else if (!(cheapest_node->above_median) && !(cheapest_node->target_node->above_median))
+	else if (!(cheapest_node->above_median)
+		&& !(cheapest_node->target_node->above_median))
 		reverse_rotate_both(a, b, cheapest_node);
-
 	prep_for_push(b, cheapest_node, 'b');
 	prep_for_push(a, cheapest_node->target_node, 'a');
 	pa(b, a, false);
@@ -83,6 +76,4 @@ void	sort_stack(t_stack_node **a, t_stack_node **b)
 	}
 	current_index(*a);
 	smallest_to_top(a);
-//	ft_printf("STACK A:\n");
-//	print_stack(*a);
 }
