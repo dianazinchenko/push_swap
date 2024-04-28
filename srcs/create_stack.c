@@ -37,7 +37,7 @@ void	append_node(t_stack_node **stack, int nbr)
 	}
 }
 
-void	create_stack(t_stack_node **a, char **argv)
+void	create_stack(t_stack_node **a, char **argv, bool argc_2)
 {
 	long	nbr;
 	int		i;
@@ -47,12 +47,14 @@ void	create_stack(t_stack_node **a, char **argv)
 	{
 		nbr = ft_atol(argv[i]);
 		if (ft_strlen(argv[i]) > 11 || nbr < INT_MIN || nbr > INT_MAX)
-			error_free(a);
+			error_free(a, argv, argc_2);
 		if (repetition_error(*a, (int)nbr))
-			error_free(a);
+			error_free(a, argv, argc_2);
 		if (syntax_error(argv[i]))
-			error_free(a);
+			error_free(a, argv, argc_2);
 		append_node(a, (int)nbr);
 		i++;
 	}
+	if (argc_2)
+		free_matrix(argv);
 }

@@ -43,11 +43,12 @@ t_stack_node	*find_cheapest(t_stack_node *stack);
 bool			syntax_error(char *str);
 bool			repetition_error(t_stack_node *a, int nbr);
 void			free_stack(t_stack_node **stack);
-void			error_free(t_stack_node **a);
+void			free_matrix(char **argv);
+void			error_free(t_stack_node **a, char **argv, bool argc_2);
 
 /* Create Stack */
 void			append_node(t_stack_node **stack, int nbr);
-void			create_stack(t_stack_node **a, char **argv);
+void			create_stack(t_stack_node **a, char **argv, bool argc_2);
 
 /* Swap Operations */
 void			sa(t_stack_node **a, bool print);

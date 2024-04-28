@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:16:50 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/26 10:52:30 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/28 11:22:04 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int	main(int argc, char **argv)
 	else if (argc == 2)
 	{
 		argv = ft_split(argv[1], ' ');
-		create_stack(&a, argv);
+		create_stack(&a, argv, true);
 	}
 	else
-		create_stack(&a, argv + 1);
+		create_stack(&a, argv + 1, false);
 	if (!sorted_stack(a))
 	{
 		if (stack_len(a) == 2)
@@ -38,29 +38,6 @@ int	main(int argc, char **argv)
 		else
 			sort_stack(&a, &b);
 	}
-	/*printf("Stack a:\n");
-	print_stack(a);
-	printf("Stack b:\n");
-	print_stack(b);*/
-
-	// test operations
-	//sa(&a, false);
-	//sb(&b, false);
-	//ss(&a, &b, false);
-	//pa(&b, &a, false);
-	//pb(&a, &b, false);
-	//ra(&a, false);
-	//rb(&b, false);
-	//rr(&a, &b, false);
-	//rra(&a, false);
-	//rrb(&b, false);
-	//rrr(&a, &b, false);
-
-/*	printf("\nStack a after:\n");
-	print_stack(a);
-	printf("Stack b after:\n");
-	print_stack(b);*/
 	free_stack(&a);
-	
 	return (0);
 }

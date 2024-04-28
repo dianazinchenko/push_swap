@@ -59,9 +59,23 @@ void	free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-void	error_free(t_stack_node **a)
+void	free_matrix(char **argv)
+{
+	int	i;
+
+	i = 0;
+	if (argv == NULL || *argv == NULL)
+		return ;
+	while (argv[i])
+		free(argv[i++]);
+	free(argv);
+}
+
+void	error_free(t_stack_node **a, char **argv, bool argc_2)
 {
 	free_stack(a);
+	if (argc_2)
+		free_matrix(argv);
 	write(2, "Error\n", 6);
 	exit(1);
 }
