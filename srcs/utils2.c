@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:00:45 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/28 14:28:05 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/29 11:13:14 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	current_index(t_stack_node *stack)
 	while (stack)
 	{
 		stack->index = i;
-		if (stack->index <= median)
+		if (stack->index < median)
 			stack->above_median = true;
 		else
 			stack->above_median = false;
@@ -55,7 +55,7 @@ t_stack_node	*find_cheapest(t_stack_node *stack)
 		return (NULL);
 	while (stack)
 	{
-		if (stack->cheapest == true)
+		if (stack->cheapest)
 			return (stack);
 		stack = stack->next;
 	}
