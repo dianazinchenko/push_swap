@@ -47,7 +47,7 @@ void	free_stack(t_stack_node **stack)
 	t_stack_node	*tmp;
 	t_stack_node	*current;
 
-	if (!stack)
+	if (stack == NULL)
 		return ;
 	current = *stack;
 	while (current)

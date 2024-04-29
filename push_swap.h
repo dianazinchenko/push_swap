@@ -82,7 +82,4 @@ void			init_b_to_a(t_stack_node *a, t_stack_node *b);
 /* Sort Stack */
 void			sort_stack(t_stack_node **a, t_stack_node **b);
 
-/* TESTING */
-void			print_stack(t_stack_node *stack);
-
 #endif
