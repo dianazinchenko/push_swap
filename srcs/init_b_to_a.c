@@ -74,6 +74,7 @@ static void	set_cheapest(t_stack_node *stack)
 			cheapest = stack->push_price;
 			cheapest_node = stack;
 		}
+		stack->cheapest = false;
 		stack = stack->next;
 	}
 	cheapest_node->cheapest = true;
