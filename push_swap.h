@@ -41,13 +41,12 @@ t_stack_node	*find_cheapest(t_stack_node *stack);
 
 /* Input Error */
 bool			syntax_error(char *str);
-bool			repetition_error(t_stack_node *a, int nbr);
+bool			repetition_error(t_stack_node *stack, int nbr);
 void			free_stack(t_stack_node **stack);
 void			free_matrix(char **argv);
 void			error_free(t_stack_node **a, char **argv, bool argc_2);
 
 /* Create Stack */
-void			append_node(t_stack_node **stack, int nbr);
 void			create_stack(t_stack_node **a, char **argv, bool argc_2);
 
 /* Swap Operations */
@@ -70,7 +69,7 @@ void			reverse_rotate_both(t_stack_node **a,
 					t_stack_node **b, t_stack_node *cheapest_node);
 
 /* Push Operations */
-void			pa(t_stack_node **a, t_stack_node **b, bool print);
+void			pa(t_stack_node **b, t_stack_node **a, bool print);
 void			pb(t_stack_node **a, t_stack_node **b, bool print);
 
 /* Sort Three */

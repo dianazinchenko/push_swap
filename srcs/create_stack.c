@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void	append_node(t_stack_node **stack, int nbr)
+static void	append_node(t_stack_node **stack, int nbr)
 {
 	t_stack_node	*new_node;
 	t_stack_node	*last_node;
