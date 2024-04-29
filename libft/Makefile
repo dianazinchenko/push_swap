@@ -6,13 +6,13 @@
 #    By: dzinchen <dzinchen@student.42porto.co      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/18 09:42:25 by dzinchen          #+#    #+#              #
-#    Updated: 2023/10/19 11:57:08 by dzinchen         ###   ########.fr        #
+#    Updated: 2024/04/29 10:44:35 by dzinchen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = cc
+CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
