@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:20:46 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/29 11:19:34 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/29 15:51:57 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ t_stack_node	*find_biggest_node(t_stack_node *stack)
 	{
 		if (stack->nbr > biggest->nbr)
 			biggest = stack;
-		stack = head->next;
+		stack = stack->next;
 	}
 	return (biggest);
 }
