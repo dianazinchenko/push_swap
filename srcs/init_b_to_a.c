@@ -21,7 +21,7 @@ static void	set_target_for_b(t_stack_node *a, t_stack_node *b)
 	while (b)
 	{
 		a_node = a;
-		best_match = LONG_MAX;
+		best_match = INT_MAX;
 		while (a_node)
 		{
 			if (a_node->nbr > b->nbr && a_node->nbr < best_match)
@@ -31,7 +31,7 @@ static void	set_target_for_b(t_stack_node *a, t_stack_node *b)
 			}
 			a_node = a_node->next;
 		}
-		if (best_match == LONG_MAX)
+		if (best_match == INT_MAX)
 			b->target_node = find_smallest_node(a);
 		else
 			b->target_node = target_node;

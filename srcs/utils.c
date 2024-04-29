@@ -6,7 +6,7 @@
 /*   By: dzinchen <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 15:20:46 by dzinchen          #+#    #+#             */
-/*   Updated: 2024/04/29 15:51:57 by dzinchen         ###   ########.fr       */
+/*   Updated: 2024/04/29 16:28:37 by dzinchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	stack_len(t_stack_node *stack)
 {
 	int	i;
-	
+
 	if (stack == NULL)
 		return (0);
 	i = 0;
