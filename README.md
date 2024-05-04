@@ -40,3 +40,10 @@ make
 ./push_swap "2 5 42 8 11"
 or
 ./push_swap 2 5 42 8 11
+```
+**Output:**
+pb
+pb
+ra
+pa
+pa
