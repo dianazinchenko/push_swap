@@ -41,7 +41,7 @@ make
 or
 ./push_swap 2 5 42 8 11
 ```
-**Output:**
+**Output:**</br>
 pb</br>
 pb</br>
 ra</br>
